@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
+        <title>Resume - Michael Jolley</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}" />
+        <!-- Font Awesome icons -->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
+        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="styles.css" rel="stylesheet" />
+        <!-- Core theme CSS -->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
+        <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Michael Jolley</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="Headshot2.jpg" alt="..." /></span>
+                <span class="d-none d-lg-block">
+                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/Headshot2.jpg' %}" alt="Michael Jolley" />
+                </span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
@@ -34,59 +39,57 @@
                 </ul>
             </div>
         </nav>
-        <!-- Page Content-->
+
+        <!-- Page Content -->
         <div class="container-fluid p-0">
-            <!-- About-->
+            <!-- About Section -->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Michael
-                        <span class="text-primary">Jolley</span>
-                    </h1>
+                    <h1 class="mb-0">Michael <span class="text-primary">Jolley</span></h1>
                     <div class="subheading mb-5">
                         1212 James Rifle Court · Leesburg, VA 20176 · (571) 528-6985 ·
-                        <a href="mailto:name@email.com">jolleymc@gmail.com</a>
+                        <a href="mailto:jolleymc@gmail.com">jolleymc@gmail.com</a>
                     </div>
                     <p class="lead mb-5">
-                        Hello! I am an Information Technology major with a minor in Philosophy at James Madison University, pursuing
-                        my passion for learning in the intelligence and cybersecurity fields.
-                        I also enjoy practicing critical thinking and exploring abstract ideas in
-                        the field of Philosophy. I am experienced in Python, SQL, software development, networking, Linux, and much more.
-                        I am currently looking for a Summer 2025 internship.
+                        Hello! I am an Information Technology major with a minor in Philosophy at James Madison University, pursuing my passion for learning in the intelligence and cybersecurity fields. I am experienced in Python, SQL, software development, networking, Linux, and much more. I am currently looking for a Summer 2025 internship.
                     </p>
                     <div class="social-icons">
-                        <a class="social-icon" href="https://linkedin.com/in/michael-jolley-23a4b2219/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/jolleymc"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://www.linkedin.com/in/michaeljolley/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/jolleymc" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
+
+            <!-- Projects Section -->
+            <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Projects</h2>
+                    <!-- Project 1 -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Socket Programming Project</h3>
                             <div class="subheading mb-3">Tech Stack: Python, Socket Module, TCP</div>
                             <p>This project involves using the socket module in Python to exchange TCP messages from client to server, with the server returning an echo/ping and message reception timestamp.</p>
-                            <a href="ServerTCPEcho.py" download>Download Server Code</a><br>
-                            <a href="ClientTCPEcho.py" download>Download Client Code</a>
+                            <a href="{% static 'downloads/ServerTCPEcho.py' %}" download>Download Server Code</a><br>
+                            <a href="{% static 'downloads/ClientTCPEcho.py' %}" download>Download Client Code</a>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Spring 2024</span></div>
                     </div>
+                    <!-- Project 2 -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Data Analysis Project with Python</h3>
                             <div class="subheading mb-3">Tech Stack: Python, MatPlotLib, NumPy</div>
-                            <p>This program simulates student grade data, calculates important statistics, and visualizes the results using plots. It automates the analysis of student performance across various subjects by generating grades either randomly or from a file, and it provides insights through visual representations like bar charts and histograms.</p>
-                            <a href="functions.py" download>Download Functions Code</a><br>
-                            <a href="main.py" download>Download Main Code</a>
+                            <p>This program simulates student grade data, calculates important statistics, and visualizes the results using plots.</p>
+                            <a href="{% static 'downloads/functions.py' %}" download>Download Functions Code</a><br>
+                            <a href="{% static 'downloads/main.py' %}" download>Download Main Code</a>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Spring 2024</span></div>
                     </div>
+                </div>
             </section>
             <hr class="m-0" />
+
+            <!-- Additional Sections (Education, Skills, Interests, etc.) -->
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
@@ -240,9 +243,11 @@
             </section>
 
         </div>
-        <!-- Bootstrap core JS-->
+            <!-- Repeat similar structure for other sections -->
+
+        <!-- Bootstrap core JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <!-- Core theme JS -->
+        <script src="{% static 'js/scripts.js' %}"></script>
     </body>
 </html>
