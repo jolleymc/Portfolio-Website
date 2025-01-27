@@ -24,7 +24,6 @@ def generate_grades(numStudents):
     students = [Student() for _ in range(numStudents)]
     return students
 '''
-
 # version 2 of generate_grades - generates grades from a file
 def generate_grades(filename):
     students = []
